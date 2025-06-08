@@ -215,6 +215,7 @@ def main():
     if 'Random Forest' in model_results:
         best_model = model_results['Random Forest']['model']
         joblib.dump(best_model, 'malaria_prediction_model.pkl')
+        joblib.dump(X.columns.tolist(), 'model_columns.pkl')
         print("\nModel saved successfully!")
     
     # Create historical data plot
@@ -261,3 +262,25 @@ if __name__ == "__main__":
     for name, fig in results['figures'].items():
         fig.savefig(f'{name}_plot.png')
     plt.close('all')
+
+# Example: model_training.py
+
+
+import pandas as pd
+from sklearn.ensemble import RandomForestRegressor
+import joblib
+
+df = pd.read_csv("estimated_numbers.csv")
+# Clean and preprocess
+df = df[df['No. of cases_median'].notnull()]
+df['Year'] = df['Year'].astype(int)
+X = df[['Year', 'WHO Region']]
+X = pd.get_dummies(X)
+y = df['No. of cases_median'].astype(float)
+
+model = RandomForestRegressor()
+model.fit(X, y)
+
+# Save the model and columns
+joblib.dump(model, "malaria_prediction_model.pkl")
+joblib.dump(X.columns.tolist(), "model_columns.pkl")
