@@ -181,7 +181,7 @@ joblib>=1.0.0        # Model persistence
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Pitch deck presentation
-https://www.canva.com/design/DAGp7QUYZR8/1l9Mlm01aRZ0kSBdlJtCsQ/edit
+https://aigroup25.my.canva.site/
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
