@@ -180,9 +180,13 @@ joblib>=1.0.0        # Model persistence
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
+## Pitch deck presentation
+https://www.canva.com/design/DAGp7QUYZR8/1l9Mlm01aRZ0kSBdlJtCsQ/edit
+
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 - World Health Organization for providing the malaria data
-- United Nations for the Sustainable Development Goals framework 
+- United Nations for the Sustainable Development Goals framework
+  
